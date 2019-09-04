@@ -1,5 +1,4 @@
 const buttons = document.querySelectorAll('button');
-let button = document.getElementById('grande');
 let height = 500;
 
 buttons.forEach(
