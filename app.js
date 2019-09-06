@@ -1,13 +1,9 @@
 const buttons = document.querySelectorAll('button');
 let height = 500;
 
-buttons.forEach(
-    button => {
-        button.style.height = `${height}px`;
-        height = height - 20;
-        button.style.backgroundColor = button.dataset.colors;
-    }
-);
+const func = ()=>{
+    alert('xilofono');
+}
 
 const playnote = event =>{
     const button = event.target;
@@ -19,3 +15,15 @@ const playnote = event =>{
     audio.currentTime = 0;
     audio.play();
 }
+
+buttons.forEach(
+    button => button.addEventListener('click', playnote)  
+);
+
+buttons.forEach(
+    button => {
+        button.style.height = `${height}px`;
+        height = height - 20;
+        button.style.backgroundColor = button.dataset.colors;
+    }
+);
